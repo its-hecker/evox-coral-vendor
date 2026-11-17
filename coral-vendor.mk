@@ -5,10 +5,9 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/google/coral
 
-# RisingOS GMS already installs its shared Pixel sysconfig XMLs.
+# Evolution X GMS supplies shared Pixel config and ambient matcher database.
 # Keep coral-only sysconfig entries below; avoid duplicate Make/Soong destinations.
 PRODUCT_COPY_FILES += \
-    vendor/google/coral/proprietary/product/etc/ambient/matcher_tah.leveldb:$(TARGET_COPY_OUT_PRODUCT)/etc/ambient/matcher_tah.leveldb \
     vendor/google/coral/proprietary/product/etc/felica/common.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/common.cfg \
     vendor/google/coral/proprietary/product/etc/felica/mfm.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfm.cfg \
     vendor/google/coral/proprietary/product/etc/felica/mfs.cfg:$(TARGET_COPY_OUT_PRODUCT)/etc/felica/mfs.cfg \
